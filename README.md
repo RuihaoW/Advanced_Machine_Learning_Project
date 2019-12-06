@@ -8,3 +8,5 @@ To run the demo of CAM with our 4-class dataset
 2. "CNN_CAM_NP_4_Class.py" is used to train a model with 4 conv2D layers, 1 GAP layer and 1 Dense layer. You can train the model with the dataset from Step 1. It will save the model and weights in .h5 format.
 3. "CNN_CAM_weight_Maps.py" is used to generate all CAMs for all classes. It will save the heat-maps and superposition of maps and original images in .jpg and .npy
 4. "Heat_Map_Show.py" is used to show cams those are saved in Step 3.
+
+File "model_weight.h5" is the well-trained model for 4-class dataset. You can directly use it in "CNN_CAM_weight_Maps.py" if you do not want to train your own model in "CNN_CAM_NP_4_Class.py".
