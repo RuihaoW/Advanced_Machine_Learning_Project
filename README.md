@@ -44,6 +44,14 @@ Class: Horse
 Class: Bird
 ![Gap_Dog](/images/gap_bird.PNG)
 
+## Part 4: Discussion and Reference
+The Grad-CAM is an updated version of the normal CAM in CNN visualizing task. In the CAM paper, the author provides an approach that combines the GAP weights with feature maps to show the Area of Interest (AOI) when CNN classifies the image.  However, this approach will change the structure of the original CNN model. It is not suitable for some structure-fixed model like VGG. In this case, the Grad-CAM solves this problem perfectly. In Grad-CAM, the model structure remains the same. Based on the mathematical prove, the weights “a” in Grad-CAM is proportional to the weights in CAM so that we can better understand how the gradients of target class with respect to feature maps will represent the importance of each feature maps for the target class.  
+Here is a list of relevant papers:
+B. Zhou, A. Khosla, A. Lapedriza, A. Oliva, and A. Torralba. Learning Deep Features for Discriminative Localization. CVPR'16 (arXiv:1512.04150, 2015). 
+M. Lin, Q. Chen, and S. Yan. Network in network. International Conference on Learning Representations, 2014.
+
+## Part 5: Conclusion
+Based on our reproduced results, we find that it corroborates the claims of the original paper. With a well-trained model, Grad-CAM generates the heat-map for different target class and the heat-map containing independent and specific features of the target class. It is a good approach for visualizing the CNN model. 
 
 
 
