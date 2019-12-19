@@ -13,3 +13,38 @@ File "model_weight.h5" is the well-trained model for 4-class dataset. You can di
 
 
 Updated on 12/19/2019:
+# Part 1: Summary of the original paper
+In the paper, the authors provide a mapping approach to highlight the region in the image the prediction relies on. In the CNN model, feature maps are the product of convolutional layers. These feature maps correspond to different features, textures and patterns. The core of Grad-CAM is to use the gradient of the score for the target class, with respect to each feature maps to generate the weight “Wa”, The weight “Wa” represents a partial linearization of the deep network downstream from overall feature maps and captures the ‘importance’ of each feature map for the target class. After the weighted combination based on weight “Wa” and feature maps, the ReLU activation function is used to obtain the heat-map of the desired class. Coordinating with the heat-map, the Guided Backpropagation is used by multiplication to perform the fine-grained importance like pixel-space gradient visualization with a relatively high resolution. 
+
+# Part 2: Reproduced result
+We search online to build our own dataset. In this dataset, we have 4 classes images: dog, cat, horse and bird. The numbers of images of each class are: 12500, 12500, 8452, 8671. We use vgg-16 to classify the images in our dataset and then use grad-cam approach to generate the heat-maps. We run our model on a desktop with a Nvidia RTX 2080 with the IDE PyCharm. Our code is inspired by this tutorial(https://github.com/insikk/Grad-CAM-tensorflow). The TensorFlow is used as a machine learning library.  Here are some examples of the reproduction results:
+Class: Dog
+![GitHub Logo](/images/reproduce_dog.jpg)
+Class: Cat
+ 
+Class: Horse
+ 
+Class: Bird
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
