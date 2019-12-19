@@ -18,14 +18,15 @@ In the paper, the authors provide a mapping approach to highlight the region in 
 
 # Part 2: Reproduced result
 We search online to build our own dataset. In this dataset, we have 4 classes images: dog, cat, horse and bird. The numbers of images of each class are: 12500, 12500, 8452, 8671. We use vgg-16 to classify the images in our dataset and then use grad-cam approach to generate the heat-maps. We run our model on a desktop with a Nvidia RTX 2080 with the IDE PyCharm. Our code is inspired by this tutorial(https://github.com/insikk/Grad-CAM-tensorflow). The TensorFlow is used as a machine learning library.  Here are some examples of the reproduction results:
+
 Class: Dog
 ![Reproduced_Dog](/images/reproduce_dog.png)
 Class: Cat
- 
+![Reproduced_Cat](/images/reproduce_cat.png) 
 Class: Horse
- 
+![Reproduced_Horse](/images/reproduce_horse.png) 
 Class: Bird
- 
+![Reproduced_Bird](/images/reproduce_bird.png) 
 
 
 
