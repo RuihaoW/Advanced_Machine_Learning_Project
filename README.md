@@ -32,6 +32,7 @@ Class: Bird
 ## Part 3: Discovery and Demonstration
 During our work process, we find that Grad-CAM generates the heat-map with relatively low resolution, which means that it only provides a rough region in the image. Although by fusing the Guided Backpropagation and the heat-map, the resolution is improved to show detailed information, we think we can achieve a similar performance by removing the pooling layers inside the CNN model. In this case, the heat-map has the same size as original input. It is not needed to “forcefully” increase the size of heat-map of the original input anymore. We run a demo based on this approach. First, we build the CNN model without any pooling layer after the convolutional layers. Second, we use Global Average Pooling (GAP) to replace the fully connected layers. Third, we train this model with our 4-class dataset and get the final model and weights with 90%  accuracy . Fourth, the weights between the GAP and final output are picked up to generate the weighted combination of each feature map. The final heat-map is done by summing these weighted feature maps. The code is already uploaded to the project website. Here are some examples from the demo:
 
+
 Class:Dog
 ![Gap_Dog](/images/gap_dog.PNG)
 Class: Cat
