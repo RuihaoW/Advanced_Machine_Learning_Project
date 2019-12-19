@@ -35,12 +35,15 @@ During our work process, we find that Grad-CAM generates the heat-map with relat
 Class:Dog
 
 ![Gap_Dog](/images/gap_dog.PNG)
+
 Class: Cat
 
 ![Gap_Dog](/images/gap_cat.PNG)
+
 Class: Horse
 
 ![Gap_Dog](/images/gap_horse.PNG)
+
 Class: Bird
 
 ![Gap_Dog](/images/gap_bird.PNG)
