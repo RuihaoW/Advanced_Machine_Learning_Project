@@ -11,7 +11,7 @@ To run the demo of CAM with our 4-class dataset
 
 File "model_weight.h5" is the well-trained model for 4-class dataset. You can directly use it in "CNN_CAM_weight_Maps.py" if you do not want to train your own model in "CNN_CAM_NP_4_Class.py".
 
-
+#########
 Updated on 12/19/2019:
 # Part 1: Summary of the original paper
 In the paper, the authors provide a mapping approach to highlight the region in the image the prediction relies on. In the CNN model, feature maps are the product of convolutional layers. These feature maps correspond to different features, textures and patterns. The core of Grad-CAM is to use the gradient of the score for the target class, with respect to each feature maps to generate the weight “Wa”, The weight “Wa” represents a partial linearization of the deep network downstream from overall feature maps and captures the ‘importance’ of each feature map for the target class. After the weighted combination based on weight “Wa” and feature maps, the ReLU activation function is used to obtain the heat-map of the desired class. Coordinating with the heat-map, the Guided Backpropagation is used by multiplication to perform the fine-grained importance like pixel-space gradient visualization with a relatively high resolution. 
