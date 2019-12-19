@@ -10,3 +10,6 @@ To run the demo of CAM with our 4-class dataset
 4. "Heat_Map_Show.py" is used to show cams those are saved in Step 3.
 
 File "model_weight.h5" is the well-trained model for 4-class dataset. You can directly use it in "CNN_CAM_weight_Maps.py" if you do not want to train your own model in "CNN_CAM_NP_4_Class.py".
+
+
+Updated on 12/19/2019:
